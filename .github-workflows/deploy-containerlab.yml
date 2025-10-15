@@ -54,9 +54,4 @@ jobs:
             sudo containerlab deploy -t labs/frr-lab.clab.yml || sudo containerlab destroy --cleanup && sudo containerlab deploy -t labs/frr-lab.clab.yml
           EOF
  }} << 'EOF'
-            set -e
-            cd ~/network-automation-lab || git clone https://github.com/${{ github.repository }}.git ~/network-automation-lab
-            cd ~/network-automation-lab
-            git pull origin main
-            sudo containerlab deploy -t labs/frr-lab.clab.yml || sudo containerlab destroy --cleanup && sudo containerlab deploy -t labs/frr-lab.clab.yml
-          EOF
+
